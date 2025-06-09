@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirBnb Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="static/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,29 +28,28 @@
 </head>
 
 <body>
-    <header CLASS="sticky top-0 z-50">
+    <header class="sticky top-0 z-50">
         <!-- top nav -->
-        <!-- <div class="flex  items-center justify-evenly bg-white shadow-md p-4 max-w-5xl mx-auto"> -->
         <div
-            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-slate-50 to-white shadow-sm  w-full p-3">
+            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-slate-50 to-white shadow-sm  w-full px-7 py-4">
             <!-- logo -->
             <div class="flex items-center justify-start">
-                <img src="static/logo.png" class="h-10 w-13" alt="">
-                <div><span class="text-[#FF5A60] font-semibold text-2xl">airbnb</span></div>
+                <img src="static/long-logo.png" class="h-10 w-28" alt="">
+                <!-- <div><span class="text-[#FF5A60] font-semibold text-2xl">airbnb</span></div> -->
             </div>
 
             <!-- search bar -->
-            <div id="reveal"
-                class="flex opacity-0 translate-y-10 transition-all duration-700 hidden md:flex justify-between px-2 items-center  border border-gray-300 shadow-md rounded-full h-12 w-96">
+            <div 
+                class="flex  translate-x-6 transition-all duration-700 hidden md:flex justify-between px-2 items-center  border border-gray-300 shadow-md rounded-full h-12 w-[400px]">
                 <button class="text-sm border-r-2 px-2  font-medium hover:scale-105 transition-transform duration-300">
-                    <span class="flex flex-row items-center"><img src="static/home_icon.avif" class="h-10 w-12" alt="">
+                    <span class="flex flex-row font-semibold text-center text-lg items-center"><img src="static/home_icon.avif" class="h-10 w-12" alt="">
                         Anywhere </span>
                 </button>
                 <button
-                    class="text-sm border-r-2 px-2 font-medium hover:scale-105 transition-transform duration-300">Anytime
+                    class=" border-r-2 px-2 font-semibold text-center text-lg hover:scale-105 transition-transform duration-300">Anytime
                 </button>
                 <button
-                    class="text-sm border-r-2 px-2 font-medium hover:scale-105 transition-transform duration-300">Add
+                    class=" px-2 font-semibold text-center text-lg  hover:scale-105 transition-transform duration-300">Add
                     Guest</button>
                 <i
                     class="fa-solid fa-magnifying-glass text-white bg-red-500 hover:scale-105 transition-transform duration-300 rounded-full p-2"></i>
@@ -57,10 +57,10 @@
 
             <!-- navigation right section -->
             <div class="right-nav flex justify-end  items-center space-x-4">
-                <button class="text-md hidden lg:block font-semibold">Become a Host</button>
-                <div class="bg-slate-100  px-2 py-1 text-slate-600 text-sm  rounded-full"><i
+                <button class="text-md hidden lg:block text-gray-800 font-semibold">Become a Host</button>
+                <div class="bg-slate-100  px-2 py-1 text-gray-900 text-md  rounded-full"><i
                         class="fa-solid fa-globe"></i></div>
-                <div class="bg-slate-100 px-2 py-1 text-slate-600 text-sm  rounded-full"><i
+                <div class="bg-slate-100 px-2 py-1 text-gray-900 text-md  rounded-full"><i
                         class="fa-solid fa-bars"></i></div>
             </div>
         </div>
@@ -86,13 +86,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
-                           <button>Guest favourite</button>
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
+                            <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -111,7 +111,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
@@ -130,13 +130,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Trivandrum</h1>
@@ -155,13 +155,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Trivandrum</h1>
@@ -181,7 +181,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
@@ -200,13 +200,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Trivandrum</h1>
@@ -237,13 +237,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -262,7 +262,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kochi</h1>
@@ -281,13 +281,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Kochi</h1>
@@ -306,13 +306,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Kochi</h1>
@@ -332,7 +332,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kochi</h1>
@@ -351,13 +351,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Kochi</h1>
@@ -388,13 +388,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -413,7 +413,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kottayam</h1>
@@ -432,13 +432,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Kottayam</h1>
@@ -457,13 +457,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Kottayam</h1>
@@ -483,7 +483,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kottayam</h1>
@@ -502,13 +502,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Kottayam</h1>
@@ -539,13 +539,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -564,7 +564,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Thrissur</h1>
@@ -583,13 +583,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Thrissur</h1>
@@ -608,13 +608,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Thrissur</h1>
@@ -634,7 +634,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Thrissur</h1>
@@ -653,13 +653,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Thrissur</h1>
@@ -690,13 +690,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -715,7 +715,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Idukki</h1>
@@ -734,13 +734,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Idukki</h1>
@@ -759,13 +759,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Idukki</h1>
@@ -785,7 +785,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Idukki</h1>
@@ -804,13 +804,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Idukki</h1>
@@ -841,13 +841,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Wayanad</h1>
@@ -866,7 +866,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Wayanad</h1>
@@ -885,13 +885,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Wayanad</h1>
@@ -910,13 +910,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Wayanad</h1>
@@ -936,7 +936,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Wayanad</h1>
@@ -955,13 +955,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Wayanad</h1>
@@ -992,13 +992,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Goa</h1>
@@ -1017,7 +1017,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Delhi</h1>
@@ -1036,13 +1036,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Delhi</h1>
@@ -1061,13 +1061,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Delhi</h1>
@@ -1087,7 +1087,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Delhi</h1>
@@ -1106,13 +1106,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Delhi</h1>
@@ -1143,13 +1143,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Goa</h1>
@@ -1168,7 +1168,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Bengaluru</h1>
@@ -1187,13 +1187,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Bengaluru</h1>
@@ -1212,13 +1212,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Bengaluru</h1>
@@ -1238,7 +1238,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Bengaluru</h1>
@@ -1257,13 +1257,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Bengaluru</h1>
@@ -1294,13 +1294,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Goa</h1>
@@ -1319,7 +1319,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Goa</h1>
@@ -1338,13 +1338,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Goa</h1>
@@ -1363,13 +1363,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Goa</h1>
@@ -1389,7 +1389,7 @@
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Goa</h1>
@@ -1408,13 +1408,13 @@
 
                         <!-- guest fav -->
                         <div
-                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-2 py-2 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
 
                         <!-- heart -->
                         <div class="absolute top-2  right-2">
-                            <button><i class="fa-regular w-4 h-4 fa-heart"></i></button>
+                            <button class="fav-btn"><i class="fav-icon fa-solid fa-heart text-xl text-slate-300 transition-colors duration-300"></i></button>
                         </div>
                     </div>
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Goa</h1>
@@ -1581,19 +1581,18 @@
                 </div>
             </div>
     </footer>
-
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
+        const favButtons = document.querySelectorAll(".fav-btn");
+
+        favButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const icon = btn.querySelector(".fav-icon");
+                icon.classList.toggle("text-slate-300");
+                icon.classList.toggle("text-red-500");  
             });
         });
-
-        const hiddenElement = document.getElementById('reveal');
-        observer.observe(hiddenElement);
     </script>
+
 </body>
 
 </html>
