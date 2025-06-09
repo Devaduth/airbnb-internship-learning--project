@@ -9,27 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: "Mulish";
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <header CLASS="sticky top-0 z-50">
         <!-- top nav -->
         <!-- <div class="flex  items-center justify-evenly bg-white shadow-md p-4 max-w-5xl mx-auto"> -->
         <div
-            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-slate-50 to-white shadow-sm  w-screen p-3">
+            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-slate-50 to-white shadow-sm  w-full p-3">
             <!-- logo -->
             <div class="flex items-center justify-start">
-                <img src="static/logo.png" class="h-14 w-18" alt="">
-                <div><span class="text-red-500 font-semibold text-2xl">airbnb</span></div>
+                <img src="static/logo.png" class="h-10 w-13" alt="">
+                <div><span class="text-[#FF5A60] font-semibold text-2xl">airbnb</span></div>
             </div>
 
             <!-- search bar -->
-            <div
-                class="flex hidden md:flex justify-between px-2 items-center  border border-gray-300 rounded-full h-12 w-96">
+            <div id="reveal"
+                class="flex opacity-0 translate-y-10 transition-all duration-700 hidden md:flex justify-between px-2 items-center  border border-gray-300 shadow-md rounded-full h-12 w-96">
                 <button class="text-sm border-r-2 px-2  font-medium hover:scale-105 transition-transform duration-300">
-                    <span><i class="fa-solid  fa-house"></i> Anywhere </span>
+                    <span class="flex flex-row items-center"><img src="static/home_icon.avif" class="h-10 w-12" alt="">
+                        Anywhere </span>
                 </button>
                 <button
                     class="text-sm border-r-2 px-2 font-medium hover:scale-105 transition-transform duration-300">Anytime
@@ -44,9 +58,9 @@
             <!-- navigation right section -->
             <div class="right-nav flex justify-end  items-center space-x-4">
                 <button class="text-md hidden lg:block font-semibold">Become a Host</button>
-                <div class="bg-slate-100  px-2 py-1 text-slate-600 text-2xl  rounded-full"><i
+                <div class="bg-slate-100  px-2 py-1 text-slate-600 text-sm  rounded-full"><i
                         class="fa-solid fa-globe"></i></div>
-                <div class="bg-slate-100 px-2 py-1 text-slate-600 text-2xl  rounded-full"><i
+                <div class="bg-slate-100 px-2 py-1 text-slate-600 text-sm  rounded-full"><i
                         class="fa-solid fa-bars"></i></div>
             </div>
         </div>
@@ -55,11 +69,19 @@
     <main>
         <!-- hotels -->
         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thiruvananthapuram ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thiruvananthapuram ></h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -73,7 +95,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -86,7 +108,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -99,7 +121,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -112,7 +134,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -122,14 +144,35 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/img1.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Hotel in Trivandrum</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 3999 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.3
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kochi ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kochi ></h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room3.avif"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -143,7 +186,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room5.jpg"
-                        class="w-50 h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -156,7 +199,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -169,7 +212,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -182,7 +225,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -192,14 +235,35 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/room5.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 4599 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.6
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thrissur ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thrissur ></h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Thrissur</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -213,7 +277,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Thrissur</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -226,7 +290,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room3.avif"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Thrissur</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -239,7 +303,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img4.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Thrissur</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -250,9 +314,24 @@
                     </div>
                 </div>
 
+
+                 <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/img3.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Thrissur</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 3999 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.3
+                        </p>
+                    </div>
+                </div>
+
+
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img1.webp"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Thrissur</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -265,11 +344,19 @@
             </div>
         </div>
         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kottayam ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kottayam ></h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Kottayam</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -283,7 +370,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kottayam</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -296,7 +383,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Kottayam</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -309,7 +396,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Kottayam</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -322,7 +409,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Kottayam</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -332,14 +419,36 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thiruvananthapuram ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Kottayam</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 3999 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.3
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Thiruvananthapuram ></h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
+                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/img1.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -353,7 +462,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -366,7 +475,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -379,7 +488,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -390,9 +499,24 @@
                     </div>
                 </div>
 
+
+                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/img1.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Apartment in Trivandrum</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 3999 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.3
+                        </p>
+                    </div>
+                </div>
+
+
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in Trivandrum</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -405,11 +529,19 @@
             </div>
         </div>
         <div>
-            <h1 class="text mx-8 mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kochi ></h1>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 mx-4">
+            <div class="flex items-center mx-8 items-center justify-between ">
+                <h1 class="text  mt-4 mb-1 text-black font-bold text-xl ">Hotels in Kochi</h1>
+                <div>
+                    <button class="border-[1px] bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> <i
+                            class="fa-solid fa-less-than"> </i></button> <button
+                        class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> <i
+                            class="fa-solid fa-greater-than"></i> </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4 mx-4">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room3.avif"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Room in Kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -423,7 +555,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room5.jpg"
-                        class="w-50 h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -436,7 +568,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room2.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Home in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -449,7 +581,7 @@
 
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/img3.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">villa in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -460,9 +592,24 @@
                     </div>
                 </div>
 
+
+                 <div class="hotel-card flex flex-col items-start justify-start w-full">
+                    <img src="static/room5.jpg"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        alt="">
+                    <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
+                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
+                        <p class="text-gray-500 text-[12px]">&#8377; 4599 for 1 night</p>
+                        <p class="flex items-center gap-1 text-gray-500">
+                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.6
+                        </p>
+                    </div>
+                </div>
+
+
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <img src="static/room1.jpg"
-                        class="w-full h-60 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
+                        class="w-full h-48 object-cover rounded-3xl transition-transform duration-300 hover:scale-105"
                         alt="">
                     <h1 class="text-sm font-semibold text-gray-800 mt-2">Luxury Flat in kochi</h1>
                     <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
@@ -620,7 +767,7 @@
                     </div>
                 </div>
                 <div class="flex flex-row justify-start gap-1 items-center mt-8 space-x-2 order-1 md:order-2">
-                    <div class="text-gray-950 text-sm font-bold"><i class="fa-solid fa-globe"></i>  English (IN)</div>
+                    <div class="text-gray-950 text-sm font-bold"><i class="fa-solid fa-globe"></i> English (IN)</div>
                     <div class="text-gray-950 text-sm font-bold">₹ INR</div>
                     <div class="text-gray-950 text-sm"><i class="fa-brands fa-facebook"></i></div>
                     <div class="text-gray-950 text-sm"><i class="fa-brands fa-x-twitter"></i></div>
@@ -628,6 +775,19 @@
                 </div>
             </div>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        });
+
+        const hiddenElement = document.getElementById('reveal');
+        observer.observe(hiddenElement);
+    </script>
 </body>
 
 </html>
