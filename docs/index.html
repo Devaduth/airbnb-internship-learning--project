@@ -31,36 +31,35 @@
     <header class="sticky top-0 z-50">
         <!-- top nav -->
         <div
-            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-zinc-50 to-white shadow-sm  w-full px-7 py-4">
+            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 py-4">
             <!-- logo -->
             <div class="flex items-center justify-start">
-                <img src="static/long-logo.png" class="h-8 w-22" alt="">
+                <img src="static/long-logo.png" class="h-8 w-[6.3rem] translate-x-[-3px]" alt="">
                 <!-- <div><span class="text-[#FF5A60] font-semibold text-2xl">airbnb</span></div> -->
             </div>
 
             <!-- search bar -->
             <div
-                class="flex translate-x-6 transition-all duration-700 hidden md:flex justify-evenly px-2 items-center  bg-white border border-gray-300 shadow-md rounded-full h-12 w-96">
-                <img src="static/home_icon.avif" class="h-12 w-12" alt=""> 
-                <button class="border-r-2 pr-1 pl-0 ml-0   hover:scale-105 transition-transform duration-300">
-                    <span class="flex flex-row font-semibold text-slate-900  text-left text-sm ">
+                class="flex translate-x-7 transition-all duration-700 hidden md:flex justify-evenly  items-center  bg-white border border-gray-300 shadow-sm hover:shadow-md rounded-full h-12 w-[23.7rem]">
+                <button
+                    class=" translate-x-[-4px] py-1 pl-[5px] text-left  flex flex-row items-center  hover:scale-105 transition-transform duration-300">
+                    <img src="static/home_icon.avif" class="h-12 w-12 translate-x-[-4px]" alt="">
+                    <span
+                        class="flex border-r-[1px] translate-x-[-7px]  pr-3 pl-0 flex-row font-semibold text-slate-900  text-left text-sm ">
                         Anywhere </span>
                 </button>
                 <button
-                    class=" border-r-2 px-2  font-semibold text-center text-slate-900 text-sm hover:scale-105 transition-transform duration-300">Anytime
+                    class=" border-r-[1px]  pr-4  font-semibold text-left translate-x-[-7px] text-slate-900 text-sm ">Anytime
                 </button>
-                <button
-                    class=" px-2  text-center font-semibold text-sm text-slate-900  hover:scale-105 transition-transform duration-300">Add
-                    Guest</button>
-                <i
-                    class="fa-solid fa-magnifying-glass text-white bg-red-500 hover:scale-105 transition-transform duration-300 rounded-full p-2"></i>
+                <button class=" pr-2  text-center font-semibold text-sm text-slate-900  ">Add guests</button>
+                <i class="fa-solid fa-magnifying-glass text-white bg-[#FF385C]  rounded-full p-2"></i>
             </div>
 
             <!-- navigation right section -->
-            <div class="right-nav flex justify-end  items-center space-x-4">
-                <button class="text-sm hidden lg:block text-gray-800 font-semibold">Become a Host</button>
-                <div class="bg-gray-100  py-2 px-3 text-gray-900 text-md  rounded-full"><i
-                        class="fa-solid fa-globe"></i></div>
+            <div class="right-nav translate-x-1 flex justify-end  items-center space-x-4">
+                <button class="text-sm hidden lg:block text-gray-800 font-semibold">Become a host</button>
+                <div class="bg-gray-100 ml-10  py-2 px-3 text-gray-900 text-md  rounded-full"><i
+                        class="fa-solid  fa-globe"></i></div>
                 <div class="bg-gray-100 py-2 px-3 text-gray-900 text-md  rounded-full"><i class="fa-solid fa-bars"></i>
                 </div>
             </div>
@@ -72,13 +71,14 @@
         <!-- Bengaluru -->
         <div class="px-4">
             <div class="flex items-center px-4 items-center justify-between ">
-                <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Popular homes in Bengaluru <i class="fa-solid fa-chevron-right"></i>  </h1>
+                <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Popular homes in Bengaluru <i
+                        class="fa-solid fa-chevron-right"></i> </h1>
                 <div>
-                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> 
+                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs">
                         <i class="fa-solid text-xs opacity-80 fa-chevron-left"></i>
-                    </button> 
-                    <button  class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> 
-                        <i class="fa-solid fa-chevron-right"></i> 
+                    </button>
+                    <button class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs ">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -240,14 +240,14 @@
         <div class="px-4">
             <div class="flex items-center px-4 items-center justify-between ">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Available in Thiruvananthapuram this
-                    weekend <i class="fa-solid fa-chevron-right"></i> 
+                    weekend <i class="fa-solid fa-chevron-right"></i>
                 </h1>
                 <div>
-                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> 
+                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs">
                         <i class="fa-solid text-xs opacity-80 fa-chevron-left"></i>
-                    </button> 
-                    <button  class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> 
-                        <i class="fa-solid fa-chevron-right"></i> 
+                    </button>
+                    <button class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs ">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -414,13 +414,14 @@
         <!-- Bengaluru -->
         <div class="px-4">
             <div class="flex items-center px-4 items-center justify-between ">
-                <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Stays in Idukki <i class="fa-solid fa-chevron-right"></i></h1>
+                <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Stays in Idukki <i
+                        class="fa-solid fa-chevron-right"></i></h1>
                 <div>
-                    <button class="border-[1px] opacity-50  bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> 
+                    <button class="border-[1px] opacity-50  bg-white py-1 px-2 text-slate-400 rounded-full text-xs">
                         <i class="fa-solid text-xs opacity-80 fa-chevron-left"></i>
-                    </button> 
-                    <button  class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> 
-                        <i class="fa-solid fa-chevron-right"></i> 
+                    </button>
+                    <button class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs ">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -582,14 +583,14 @@
         <div class="px-4">
             <div class="flex items-center px-4 items-center justify-between ">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Available in Thiruvananthapuram this
-                    weekend <i class="fa-solid fa-chevron-right"></i> 
+                    weekend <i class="fa-solid fa-chevron-right"></i>
                 </h1>
                 <div>
-                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs"> 
+                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs">
                         <i class="fa-solid text-xs opacity-80 fa-chevron-left"></i>
-                    </button> 
-                    <button  class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs "> 
-                        <i class="fa-solid fa-chevron-right"></i> 
+                    </button>
+                    <button class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs ">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
@@ -756,105 +757,106 @@
     </main>
 
     <footer>
-        <div class="bg-[#F7F7F7] pt-8 pb-7 px-8">
-            <h1 class="text-left font-semibold text-xl">Inspiration for future getaways</h1>
-            <hr class="w-full my-4" />
-            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1 mb-2">
+        <div class="bg-[#F7F7F7] pt-12 pb-6 px-8 mt-12">
+            <h1 class="text-left font-semibold text-[22px]">Inspiration for future getaways</h1>
+            <button class="mt-6 font-medium border-b-2 border-slate-950 pb-3 text-sm">Unique stays</button>
+            <button class="mt-6 font-medium ml-5 text-gray-600 text-sm">Categories</button>
+            <hr class="w-full " />
+            <div class="grid grid-cols-3 mt-[1.8rem] md:grid-cols-4 lg:grid-cols-6 gap-2 mb-2">
                 <div class="flex flex-col items-start gap-6 gap-6 justify-start gap-2">
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm text-sm">Yurt Rentals</h1>
+                        <h1 class="font-medium text-sm ">Yurt Rentals</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Farm House</h1>
+                        <h1 class="font-medium text-sm text-sm">Farm Houses</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Cottage Rentals</h1>
+                        <h1 class="font-medium text-sm text-sm">Cottage Rentals</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-6 justify-start gap-2">
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Yurt Rentals</h1>
+                        <h1 class="font-medium text-sm text-sm">Yurt Rentals</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Farm Cottages</h1>
+                        <p class="text-gray-500 text-sm text-sm">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Holiday Cottages</h1>
+                        <p class="text-gray-500 text-sm text-sm ">United Kindom</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start gap-6 justify-start gap-2 hidden md:flex">
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Castle Rentals</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Farm House</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                        <h1 class="font-medium text-sm text-sm">Cabin Rentals</h1>
+                        <p class="text-gray-500 text-sm">Australia</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Holiday Rentals</h1>
+                        <h1 class="font-medium text-sm text-sm">Mansion Rentals</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-6 justify-start gap-2 hidden md:flex">
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Castle Rentals</h1>
+                        <h1 class="font-medium text-sm text-sm">Houseboats</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Luxury House</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                        <h1 class="font-medium text-sm text-sm">Luxury Cabins</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Villa Rentals</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-start gap-6 justify-start gap-2 hidden md:flex">
-                    <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Holiday Caravans</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
-                    </div>
-                    <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Holiday Bunglows</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
-                    </div>
-                    <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Luxury Cabins</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                        <h1 class="font-medium text-sm text-sm">Villa Rentals</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-6 justify-start gap-2 hidden lg:flex">
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Castle Rentals</h1>
+                        <h1 class="font-medium text-sm text-sm">Holiday Caravans</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Luxury Cabins</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Luxury House</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
-                    </div>
-                    <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Villa Rentals</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                        <h1 class="font-medium text-sm text-sm">Holiday Bungalows</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col items-start gap-6 justify-start gap-2 hidden lg:flex">
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Holiday Caravans</h1>
+                        <h1 class="font-medium text-sm text-sm">Private Island Rentals</h1>
                         <p class="text-gray-500 text-sm">United States</p>
                     </div>
                     <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Holiday Bunglows</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                        <h1 class="font-medium text-sm text-sm">Holiday Chalets</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
                     </div>
-                    <div class="cursor-pointer">
-                        <h1 class="font-semibold text-sm">Luxury Cabins</h1>
-                        <p class="text-gray-500 text-sm">United States</p>
+                    <div class="cursor-pointer flex flex-row items-end gap-1">
+                        <h1 class="font-medium text-sm text-sm">Show more</h1><i
+                            class="fa-solid text-xs fa-chevron-down"></i>
                     </div>
                 </div>
 
             </div>
-            <hr>
             <!-- support hosting airbnb section -->
-            <div class="grid grid-cols-2 md:grid-cols-3 mb-4 mt-10">
-                <div class="flex flex-col justify-between gap-5 items-start  mt-4">
+            <div class="grid grid-cols-2 md:grid-cols-3  mt-14">
+                <div class="flex flex-col  gap-4 items-start  mt-4">
                     <h1 class="text-sm font-semibold text-black">Support</h1>
                     <a href="" class="text-sm text-gray-900">Help Center</a>
                     <a href="" class="text-sm text-gray-900">Air cover</a>
@@ -863,8 +865,8 @@
                     <a href="" class="text-sm text-gray-900">Cancellation options</a>
                     <a href="" class="text-sm text-gray-900">Report Neighbourhood concern</a>
                 </div>
-                <div class="flex flex-col justify-between items-start  mt-4">
-                    <h1 class="text-sm font-semibold gap-5 text-black">Hosting</h1>
+                <div class="flex flex-col gap-4  items-start  mt-4">
+                    <h1 class="text-sm font-semibold text-black">Hosting</h1>
                     <a href="" class="text-sm text-gray-900">Airbnb your home</a>
                     <a href="" class="text-sm text-gray-900">Aircover for Hosts</a>
                     <a href="" class="text-sm text-gray-900">Hosting resources</a>
@@ -874,38 +876,40 @@
                     <a href="" class="text-sm text-gray-900">Find a co-host</a>
                 </div>
 
-                <div class="flex flex-col justify-between gap-5 items-start  mt-4">
-
+                <div class="flex flex-col gap-4  items-start  mt-4">
                     <h1 class="text-sm font-semibold text-black">Airbnb</h1>
+                    <a href="" class="text-sm text-gray-900">2025 summer release</a>
                     <a href="" class="text-sm text-gray-900">Newsroom</a>
-                    <a href="" class="text-sm text-gray-900">Careers</a>
                     <a href="" class="text-sm text-gray-900">New features</a>
+                    <a href="" class="text-sm text-gray-900">Careers</a>
                     <a href="" class="text-sm text-gray-900">Investors</a>
                     <a href="" class="text-sm text-gray-900">Airbnb.org emergency stays</a>
                 </div>
             </div>
-            <hr>
+            <hr class="mt-8">
             <!-- copyright -->
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mt-1">
-                <div class="flex flex-row justify-start gap-1 items-center mt-8 order-2 md:order-1">
-                    <div class="text-gray-950 text-sm">
-                        &copy; 2023 Airbnb, Inc.
+            <div class="flex flex-col md:flex-row justify-between items-center  mt-6 ">
+                <div class="flex flex-row justify-start   rder-2 md:order-1">
+                    <div class="text-gray-950 text-[13px]">
+                        &copy; 2025 Airbnb, Inc.
                     </div>
-                    <div class="flex items-center space-x-4">
-                        <a href="#" class=" text-sm">Privacy .</a>
-                        <a href="#" class=" text-sm">Terms .</a>
-                        <a href="#" class=" text-sm">Sitemap .</a>
-                        <a href="#" class="text-sm">Company details</a>
+                    <div class="flex  items-center space-x-3 ml-2">
+                        <div class="border border-gray-950 items-center rounded-full"></div>
+                        <a href="#" class=" text-[13px]">Privacy </a><div class="border border-gray-950  rounded-full"></div>
+                        <a href="#" class=" text-[13px]">Terms </a><div class="border border-gray-950  rounded-full"></div>
+                        <a href="#" class=" text-[13px]">Sitemap </a><div class="border border-gray-950  rounded-full"></div>
+                        <a href="#" class="text-[13px]">Company details</a>
                     </div>
                 </div>
-                <div class="flex flex-row justify-start gap-1 items-center mt-8 space-x-4 order-1 md:order-2">
+                <div class="flex flex-row justify-start items-center  gap-1 space-x-4 order-1 md:order-2">
                     <div class="text-gray-800 text-sm font-medium"><i class="fa-solid fa-globe"></i> English (IN)</div>
                     <div class="text-gray-800 text-sm font-medium">₹ INR</div>
-                    <div class="text-gray-800 text-md"><i class="fa-brands fa-facebook"></i></div>
-                    <div class="text-gray-800 text-md"><i class="fa-brands fa-x-twitter"></i></div>
-                    <div class="text-gray-800 text-md"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-facebook"></i></div>
+                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-x-twitter"></i></div>
+                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-instagram"></i></div>
                 </div>
             </div>
+        </div>
     </footer>
     <script>
         const favButtons = document.querySelectorAll(".fav-btn");
