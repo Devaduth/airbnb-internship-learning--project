@@ -24,23 +24,35 @@
             font-weight: auto;
             font-style: normal;
         }
+
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hidden {
+            -ms-overflow-style: none;
+            /* IE/Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
     </style>
 </head>
 
 <body>
     <header class="sticky top-0 z-50">
-         <!-- top nav Mobile and tablet view -->
+        <!-- top nav Mobile and tablet view -->
         <div
             class=" flex flex-col lg:hidden justify-center items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 pt-4">
             <div
                 class="flex flex-row items-center justify-center  rounded-full shadow-md border border-gray-100 w-full py-3">
-                <button><i class="fa-solid text-xs fa-magnifying-glass"> </i><span class="text-xs font-semibold ml-3"> Start Your
+                <button><i class="fa-solid text-xs fa-magnifying-glass"> </i><span class="text-xs font-semibold ml-3">
+                        Start Your
                         Search</span></button>
             </div>
             <div class="flex justify-around w-full max-w-xl space-x-10 mx-auto mt-3">
                 <button class="text-xs border-b-2 text-slate-500 border-gray-950">Homes</button>
                 <button class="text-xs text-slate-500">Experiences</button>
-                <button  class="text-xs text-slate-500">Services</button>
+                <button class="text-xs text-slate-500">Services</button>
             </div>
 
         </div>
@@ -85,49 +97,43 @@
     <main>
         <!-- hotels -->
         <!-- Bengaluru -->
-        <div class="px-4 ">
-            <div class="flex items-center px-4 items-center justify-between whitespace-nowrap">
-                <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Popular homes in Bengaluru <i
-                        class="fa-solid fa-chevron-right"></i> </h1>
+        <div class="px-4">
+            <div class="flex items-center px-4 justify-between whitespace-nowrap">
+                <h1 class="mt-4 mb-1 text-slate-900 font-bold text-lg">
+                    Popular homes in Bengaluru
+                    <i class="fa-solid fa-chevron-right"></i>
+                </h1>
                 <div>
-                    <button class="border-[1px] opacity-90bg-white py-1 px-2 text-slate-400 rounded-full text-xs">
-                        <i class="fa-solid text-xs opacity-80 fa-chevron-left"></i>
+                    <button class="border border-slate-200 py-1 px-2 text-slate-400 rounded-full text-xs">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="border border-slate-50 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs ">
+                    <button class="border border-slate-200 py-1 px-2 text-slate-700 bg-slate-50 rounded-full text-xs">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
-                    <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
-                        <!-- Img -->
-                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
-                        <!-- guest fav -->
+            <div class="flex overflow-x-auto space-x-4 px-4 py-3 scrollbar-hidden">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
+                    <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
+                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
                         <div
-                            class="absolute  font-bold top-2 left-2 bg-white bg-opacity-80 text-gray-800 text-xs px-2 m-2 py-1 rounded-full shadow">
+                            class="absolute top-2 left-2 bg-white bg-opacity-80 text-gray-800 text-xs px-2 py-1 rounded-full shadow">
                             <button>Guest favourite</button>
                         </div>
-
-                        <!-- heart -->
-                        <div class="absolute top-2 m-2  right-2">
-                            <button class="fav-btn"><i
-                                    class="fav-icon fa-solid fa-heart text-xl text-slate-800 opacity-60 transition-colors duration-100"></i></button>
+                        <div class="absolute top-2 right-2">
+                            <button><i class="fa-solid fa-heart text-xl text-slate-800 opacity-60"></i></button>
                         </div>
                     </div>
                     <h1 class="text-xs font-bold text-gray-800 mt-1">Apartment in Koramangala</h1>
-                    <div class="details flex justify-start space-x-1 items-center w-full text-sm ">
-                        <p class="text-gray-500 text-[12px]">&#8377; 6,504 for 2 night</p>
-                        <p class="flex items-center gap-1 text-[12px] text-gray-500">
-                            <i class="fa-solid fa-star text-[7px] text-gray-500"></i> 4.93
-                        </p>
+                    <div class="details flex space-x-1 text-[12px] text-gray-500 w-full">
+                        <p>&#8377; 6,504 for 2 night</p>
+                        <p class="flex items-center gap-1"><i class="fa-solid fa-star text-[7px]"></i> 4.93</p>
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
-                    <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
+                    <div class="relative w-full rounded-3xl overflow-hidden scrollbar-hide shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
@@ -146,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -172,7 +178,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -198,7 +204,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -224,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -255,7 +261,7 @@
 
         <!-- Thiruvananthapuram -->
         <div class="px-4">
-            <div class="flex items-center px-4 items-center justify-between ">
+            <div class="flex items-center px-4 justify-between whitespace-nowrap">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Available in Thiruvananthapuram this
                     weekend <i class="fa-solid fa-chevron-right"></i>
                 </h1>
@@ -268,9 +274,9 @@
                     </button>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+            
+            <div class="flex overflow-x-auto space-x-4 px-4 py-3 scrollbar-hidden">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -296,7 +302,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -322,7 +328,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -348,7 +354,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -374,7 +380,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -400,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -430,7 +436,7 @@
 
         <!-- Bengaluru -->
         <div class="px-4">
-            <div class="flex items-center px-4 items-center justify-between ">
+            <div class="flex items-center px-4 justify-between whitespace-nowrap">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Stays in Idukki <i
                         class="fa-solid fa-chevron-right"></i></h1>
                 <div>
@@ -442,9 +448,8 @@
                     </button>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+           <div class="flex overflow-x-auto space-x-4 px-4 py-3 scrollbar-hidden">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -470,7 +475,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -490,7 +495,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -516,7 +521,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -542,7 +547,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -568,7 +573,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -598,7 +603,7 @@
 
         <!-- Thiruvananthapuram -->
         <div class="px-4">
-            <div class="flex items-center px-4 items-center justify-between ">
+            <div class="flex items-center px-4 justify-between whitespace-nowrap">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Available in Thiruvananthapuram this
                     weekend <i class="fa-solid fa-chevron-right"></i>
                 </h1>
@@ -611,9 +616,8 @@
                     </button>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+            <div class="flex overflow-x-auto space-x-4 px-4 py-3 scrollbar-hidden">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -639,7 +643,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -665,7 +669,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -691,7 +695,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -717,7 +721,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
@@ -743,7 +747,7 @@
                     </div>
                 </div>
 
-                <div class="hotel-card flex flex-col items-start justify-start w-full">
+                <div class="hotel-card flex-shrink-0 w-[220px] flex flex-col items-start justify-start">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
                         <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-48 object-cover" />
