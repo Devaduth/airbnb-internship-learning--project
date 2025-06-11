@@ -29,8 +29,9 @@
 
 <body>
     <header class="sticky top-0 z-50">
+         <!-- top nav Mobile and tablet view -->
         <div
-            class="flex flex-col justify-center items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 pt-4">
+            class=" flex flex-col lg:hidden justify-center items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 pt-4">
             <div
                 class="flex flex-row items-center justify-center  rounded-full shadow-md border border-gray-100 w-full py-3">
                 <button><i class="fa-solid text-xs fa-magnifying-glass"> </i><span class="text-xs font-semibold ml-3"> Start Your
@@ -45,7 +46,7 @@
         </div>
         <!-- top nav desktop view -->
         <div
-            class="hidden tablet:grid tablet:grid-cols-3 justify-between items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 py-4">
+            class="hidden lg:grid lg:grid-cols-3 justify-between items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 py-4">
             <!-- logo -->
             <div class="flex items-center justify-start">
                 <img src="static/long-logo.png" class="h-8 w-[6.3rem] translate-x-[-3px]" alt="">
@@ -71,7 +72,7 @@
 
             <!-- navigation right section -->
             <div class="right-nav translate-x-1 flex justify-end  items-center space-x-3 ">
-                <button class="text-sm hidden custom1070:block text-gray-800 font-semibold translate-x-[-10px]">Become a
+                <button class="text-sm   text-gray-800 font-semibold translate-x-[-10px]">Become a
                     host</button>
                 <div class="bg-gray-100 ml-10  py-2 px-3 text-gray-900 text-md   rounded-full"><i
                         class="fa-solid  fa-globe"></i></div>
