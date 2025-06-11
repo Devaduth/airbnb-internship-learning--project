@@ -29,9 +29,23 @@
 
 <body>
     <header class="sticky top-0 z-50">
-        <!-- top nav -->
         <div
-            class="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 py-4">
+            class="flex flex-col justify-center items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 pt-4">
+            <div
+                class="flex flex-row items-center justify-center  rounded-full shadow-md border border-gray-100 w-full py-3">
+                <button><i class="fa-solid text-xs fa-magnifying-glass"> </i><span class="text-xs font-semibold ml-3"> Start Your
+                        Search</span></button>
+            </div>
+            <div class="flex justify-around w-full max-w-xl space-x-10 mx-auto mt-3">
+                <button class="text-xs border-b-2 text-slate-500 border-gray-950">Homes</button>
+                <button class="text-xs text-slate-500">Experiences</button>
+                <button  class="text-xs text-slate-500">Services</button>
+            </div>
+
+        </div>
+        <!-- top nav desktop view -->
+        <div
+            class="hidden tablet:grid tablet:grid-cols-3 justify-between items-center bg-gradient-to-t from-[#fdfdfd] to-white shadow-sm  w-full px-9 py-4">
             <!-- logo -->
             <div class="flex items-center justify-start">
                 <img src="static/long-logo.png" class="h-8 w-[6.3rem] translate-x-[-3px]" alt="">
@@ -40,7 +54,7 @@
 
             <!-- search bar -->
             <div
-                class="flex translate-x-7 transition-all duration-700 hidden md:flex justify-evenly  items-center  bg-white border border-gray-300 shadow-sm hover:shadow-md rounded-full h-12 w-[23.7rem]">
+                class="translate-x-6 transition-all duration-700 flex justify-evenly  items-center  bg-white border border-gray-300 shadow-sm hover:shadow-md rounded-full h-12 w-[23.7rem]">
                 <button
                     class=" translate-x-[-4px] py-1 pl-[5px] text-left  flex flex-row items-center  hover:scale-105 transition-transform duration-300">
                     <img src="static/home_icon.avif" class="h-12 w-12 translate-x-[-4px]" alt="">
@@ -56,11 +70,12 @@
             </div>
 
             <!-- navigation right section -->
-            <div class="right-nav translate-x-1 flex justify-end  items-center space-x-4">
-                <button class="text-sm hidden lg:block text-gray-800 font-semibold">Become a host</button>
-                <div class="bg-gray-100 ml-10  py-2 px-3 text-gray-900 text-md  rounded-full"><i
+            <div class="right-nav translate-x-1 flex justify-end  items-center space-x-3 ">
+                <button class="text-sm hidden custom1070:block text-gray-800 font-semibold translate-x-[-10px]">Become a
+                    host</button>
+                <div class="bg-gray-100 ml-10  py-2 px-3 text-gray-900 text-md   rounded-full"><i
                         class="fa-solid  fa-globe"></i></div>
-                <div class="bg-gray-100 py-2 px-3 text-gray-900 text-md  rounded-full"><i class="fa-solid fa-bars"></i>
+                <div class="bg-gray-100 py-2 px-3 text-gray-900 text-md   rounded-full"><i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -69,8 +84,8 @@
     <main>
         <!-- hotels -->
         <!-- Bengaluru -->
-        <div class="px-4">
-            <div class="flex items-center px-4 items-center justify-between ">
+        <div class="px-4 ">
+            <div class="flex items-center px-4 items-center justify-between whitespace-nowrap">
                 <h1 class="text  mt-4 mb-1 text-slate-900 font-bold text-lg ">Popular homes in Bengaluru <i
                         class="fa-solid fa-chevron-right"></i> </h1>
                 <div>
@@ -83,11 +98,11 @@
                 </div>
             </div>
             <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  mx-4 bg-gradient-to-b from-slate-100 to-white">
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -113,7 +128,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- heart -->
                         <div class="absolute top-2 m-2  right-2">
@@ -133,7 +148,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -159,7 +174,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -185,7 +200,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -211,7 +226,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -236,6 +251,7 @@
             </div>
         </div>
 
+
         <!-- Thiruvananthapuram -->
         <div class="px-4">
             <div class="flex items-center px-4 items-center justify-between ">
@@ -252,11 +268,11 @@
                 </div>
             </div>
             <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  mx-4 bg-gradient-to-b from-slate-100 to-white">
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -282,7 +298,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -308,7 +324,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -334,7 +350,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -360,7 +376,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -386,7 +402,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -426,11 +442,11 @@
                 </div>
             </div>
             <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  mx-4 bg-gradient-to-b from-slate-100 to-white">
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -456,7 +472,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- heart -->
                         <div class="absolute top-2 m-2  right-2">
@@ -476,7 +492,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -502,7 +518,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -528,7 +544,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/bengaluru_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -554,7 +570,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/Bengaluru_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -595,11 +611,11 @@
                 </div>
             </div>
             <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4  mx-4 bg-gradient-to-b from-slate-100 to-white">
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3  mx-4 bg-gradient-to-b from-slate-100 to-white">
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_1.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -625,7 +641,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_2.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -651,7 +667,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_3.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -677,7 +693,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_4.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -703,7 +719,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_5.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -729,7 +745,7 @@
                 <div class="hotel-card flex flex-col items-start justify-start w-full">
                     <div class="relative w-full rounded-3xl overflow-hidden shadow-md">
                         <!-- Img -->
-                        <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-52 object-cover" />
+                        <img src="static/apartments/tvm_6.avif" alt="Cottage" class="w-full h-48 object-cover" />
 
                         <!-- guest fav -->
                         <div
@@ -762,7 +778,46 @@
             <button class="mt-6 font-medium border-b-2 border-slate-950 pb-3 text-sm">Unique stays</button>
             <button class="mt-6 font-medium ml-5 text-gray-600 text-sm">Categories</button>
             <hr class="w-full " />
-            <div class="grid grid-cols-3 mt-[1.8rem] md:grid-cols-4 lg:grid-cols-6 gap-2 mb-2">
+            <div class="grid grid-cols-2 mt-[1.8rem] md:hidden lg:hidden gap-2 mb-2">
+                <div class="flex flex-col items-start gap-6 gap-6 justify-start gap-2">
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm ">Yurt Rentals</h1>
+                        <p class="text-gray-500 text-sm">United States</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Castle Rentals</h1>
+                        <p class="text-gray-500 text-sm">United States</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Holiday Caravans</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Farm Houses</h1>
+                        <p class="text-gray-500 text-sm">United States</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start gap-6 justify-start gap-2">
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Yurt Rentals</h1>
+                        <p class="text-gray-500 text-sm">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">House Boats</h1>
+                        <p class="text-gray-500 text-sm text-sm">United states</p>
+                    </div>
+                    <div class="cursor-pointer">
+                        <h1 class="font-medium text-sm text-sm">Private island rentals</h1>
+                        <p class="text-gray-500 text-sm text-sm ">United Kindom</p>
+                    </div>
+                    <div class="cursor-pointer flex flex-row items-end gap-1">
+                        <h1 class="font-medium text-sm text-sm">Show more</h1><i
+                            class="fa-solid text-xs fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:grid mt-[1.8rem] md:grid-cols-4 lg:grid-cols-6 gap-2 mb-2">
                 <div class="flex flex-col items-start gap-6 gap-6 justify-start gap-2">
                     <div class="cursor-pointer">
                         <h1 class="font-medium text-sm ">Yurt Rentals</h1>
@@ -854,8 +909,8 @@
                 </div>
 
             </div>
-            <!-- support hosting airbnb section -->
-            <div class="grid grid-cols-2 md:grid-cols-3  mt-14">
+            <!-- support hosting airbnb section desktop view -->
+            <div class="hidden md:grid md:grid-cols-3  mt-14">
                 <div class="flex flex-col  gap-4 items-start  mt-4">
                     <h1 class="text-sm font-semibold text-black">Support</h1>
                     <a href="" class="text-sm text-gray-900">Help Center</a>
@@ -880,7 +935,40 @@
                     <h1 class="text-sm font-semibold text-black">Airbnb</h1>
                     <a href="" class="text-sm text-gray-900">2025 summer release</a>
                     <a href="" class="text-sm text-gray-900">Newsroom</a>
-                    <a href="" class="text-sm text-gray-900">New features</a>
+                    <a h ref="" class="text-sm text-gray-900">New features</a>
+                    <a href="" class="text-sm text-gray-900">Careers</a>
+                    <a href="" class="text-sm text-gray-900">Investors</a>
+                    <a href="" class="text-sm text-gray-900">Airbnb.org emergency stays</a>
+                </div>
+            </div>
+            <!-- support hosting airbnb section desktop view -->
+            <div class="md:hidden grid grid-cols-1 mt-14">
+                <div class="flex flex-col  gap-4 items-start mb-4 mt-4">
+                    <h1 class="text-sm font-semibold text-black">Support</h1>
+                    <a href="" class="text-sm text-gray-900">Help Center</a>
+                    <a href="" class="text-sm text-gray-900">Air cover</a>
+                    <a href="" class="text-sm text-gray-900">Anti discrimination</a>
+                    <a href="" class="text-sm text-gray-900">Disability support</a>
+                    <a href="" class="text-sm text-gray-900">Cancellation options</a>
+                    <a href="" class="text-sm text-gray-900">Report Neighbourhood concern</a>
+                </div>
+                <hr>
+                <div class="flex flex-col gap-4  items-start mb-4 mt-4">
+                    <h1 class="text-sm font-semibold text-black">Hosting</h1>
+                    <a href="" class="text-sm text-gray-900">Airbnb your home</a>
+                    <a href="" class="text-sm text-gray-900">Aircover for Hosts</a>
+                    <a href="" class="text-sm text-gray-900">Hosting resources</a>
+                    <a href="" class="text-sm text-gray-900">Community forum</a>
+                    <a href="" class="text-sm text-gray-900">Hosting responsibly</a>
+                    <a href="" class="text-sm text-gray-900">Join a free Hosting class</a>
+                    <a href="" class="text-sm text-gray-900">Find a co-host</a>
+                </div>
+                <hr>
+                <div class="flex flex-col gap-4  items-start mb-4 mt-4">
+                    <h1 class="text-sm font-semibold text-black">Airbnb</h1>
+                    <a href="" class="text-sm text-gray-900">2025 summer release</a>
+                    <a href="" class="text-sm text-gray-900">Newsroom</a>
+                    <a h ref="" class="text-sm text-gray-900">New features</a>
                     <a href="" class="text-sm text-gray-900">Careers</a>
                     <a href="" class="text-sm text-gray-900">Investors</a>
                     <a href="" class="text-sm text-gray-900">Airbnb.org emergency stays</a>
@@ -888,25 +976,34 @@
             </div>
             <hr class="mt-8">
             <!-- copyright -->
-            <div class="flex flex-col md:flex-row justify-between items-center  mt-6 ">
-                <div class="flex flex-row justify-start   rder-2 md:order-1">
-                    <div class="text-gray-950 text-[13px]">
-                        &copy; 2025 Airbnb, Inc.
+            <div class="flex flex-col md:flex-row justify-between gap-3 items-start md:items-center  mt-6 ">
+                <div class="flex flex-col md:flex-row order-2 gap-1 order-2  md:order-1">
+                    <div class="flex text-left items-center ">
+                        <p class="text-gray-95 text-[12px] md:text-[13px]">&copy; 2025 Airbnb, Inc.</p>
                     </div>
-                    <div class="flex  items-center space-x-3 ml-2">
-                        <div class="border border-gray-950 items-center rounded-full"></div>
-                        <a href="#" class=" text-[13px]">Privacy </a><div class="border border-gray-950  rounded-full"></div>
-                        <a href="#" class=" text-[13px]">Terms </a><div class="border border-gray-950  rounded-full"></div>
-                        <a href="#" class=" text-[13px]">Sitemap </a><div class="border border-gray-950  rounded-full"></div>
-                        <a href="#" class="text-[13px]">Company details</a>
+                    <div
+                        class="flex translate-x-[-8px] text-left justify-start items-center text-[12px] md:text-[13px]  space-x-3">
+                        <div class="border border-gray-950 rounded-full hidden md:inline-block"></div>
+                        <a href="#" class="text-[12px] md:text-[13px]">Privacy </a>
+                        <div class="border border-gray-950  rounded-full"></div>
+                        <a href="#" class="text-[12px] md:text-[13px]">Terms </a>
+                        <div class="border  border-gray-950  rounded-full"></div>
+                        <a href="#" class="text-[12px] md:text-[13px]">Sitemap </a>
+                        <div class="border border-gray-950  rounded-full"></div>
+                        <a href="#" class="text-[12px] md:text-[13px]">Company details</a>
                     </div>
                 </div>
-                <div class="flex flex-row justify-start items-center  gap-1 space-x-4 order-1 md:order-2">
-                    <div class="text-gray-800 text-sm font-medium"><i class="fa-solid fa-globe"></i> English (IN)</div>
-                    <div class="text-gray-800 text-sm font-medium">₹ INR</div>
-                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-facebook"></i></div>
-                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-x-twitter"></i></div>
-                    <div class="text-gray-800 "><i class="fa-brands text-lg fa-instagram"></i></div>
+                <div class="flex flex-col md:flex-row items-start md:items-center  gap-3 space-x-4 order-1 md:order-2">
+                    <div class="flex flex-row gap-4 justify-start">
+                        <div class="text-gray-800 text-sm font-medium"><i class="fa-solid fa-globe"></i> English (IN)
+                        </div>
+                        <div class="text-gray-800 text-sm font-medium">₹ INR</div>
+                    </div>
+                    <div class="flex flex-row gap-4 justify-start ml-0 translate-x-[-15px]">
+                        <div class="text-gray-800 "><i class="fa-brands text-lg fa-facebook"></i></div>
+                        <div class="text-gray-800 "><i class="fa-brands text-lg fa-x-twitter"></i></div>
+                        <div class="text-gray-800 "><i class="fa-brands text-lg fa-instagram"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
